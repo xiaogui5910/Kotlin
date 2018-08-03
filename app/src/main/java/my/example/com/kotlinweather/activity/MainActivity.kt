@@ -1,4 +1,4 @@
-package my.example.com.kotlinweather
+package my.example.com.kotlinweather.activity
 
 import android.content.Context
 import android.os.Build
@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import my.example.com.kotlinweather.R
 import my.example.com.kotlinweather.adapter.ForecastWeatherAdapter
 import my.example.com.kotlinweather.domain.RequestForecastCommand
 import org.jetbrains.anko.doAsync
@@ -60,11 +61,15 @@ class MainActivity : AppCompatActivity() {
 //                })
                 //lambda写法
 //                rvForecastList.adapter=ForecastWeatherAdapter(result){forecast -> forecast.date }
-                rv_forecast_list.adapter = ForecastWeatherAdapter(result) { toast(it.date) }
+                rv_forecast_list.adapter = ForecastWeatherAdapter(result) {
+                    toast(it.date)
+//                    startActivity<DetailActivity>(DetailActivity.ID to it.id,
+//                            DetailActivity.CITY_NAME to result.city)
+                }
             }
         }
 
-        
+//        val intent= Intent(MainActivity@this,javaClass<DetailActivity>())
     }
 
     private val items = listOf<String>(

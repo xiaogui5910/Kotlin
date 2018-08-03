@@ -11,7 +11,7 @@ import my.example.com.kotlinweather.domain.Forecast as ModelForecast
  */
 public class ForecastDataMapper {
     fun convertFromDataModel(forecast: ForecastResult): ForecastList {
-        return ForecastList(forecast.city.name, forecast.city.country,
+        return ForecastList(0,forecast.city.name, forecast.city.country,
                 convertForecastListToDomain(forecast.list))
     }
 
