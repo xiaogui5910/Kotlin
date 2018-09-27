@@ -12,6 +12,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 import my.example.com.kotlinweather.R
 import my.example.com.kotlinweather.adapter.ForecastWeatherAdapter
 import my.example.com.kotlinweather.domain.RequestForecastCommand
+import my.example.com.kotlinweather.tips.Tip01
+import my.example.com.kotlinweather.tips.Tip02
+import my.example.com.kotlinweather.tips.Tip03
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.find
 import org.jetbrains.anko.uiThread
@@ -22,10 +25,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         tv_msg.text = "Hello Kotlin!"
-        tv_msg.setOnClickListener { object :View.OnClickListener{
-            override fun onClick(v: View?) {
+        tv_msg.setOnClickListener {
+            object : View.OnClickListener {
+                override fun onClick(v: View?) {
+                }
             }
-        } }
+        }
 
 //        toast("Hello Kotlin!")
 //        toast("Hello Kotlin!",Toast.LENGTH_SHORT)
@@ -75,6 +80,12 @@ class MainActivity : AppCompatActivity() {
         }
 
 //        val intent= Intent(MainActivity@this,javaClass<DetailActivity>())
+        Tip01().test01()
+        Tip01().test02()
+        Tip01().test03()
+        Tip02().test03('B')
+        Tip03().printList()
+        Tip03().printList02()
     }
 
     private val items = listOf<String>(
@@ -104,8 +115,8 @@ class MainActivity : AppCompatActivity() {
     /**
      * 它只是检查版本，然后如果满足条件则去执行。现在我们可以这么做：
      * supportsLollipop {
-        window.setStatusBarColor(Color.BLACK)
-        }
+    window.setStatusBarColor(Color.BLACK)
+    }
      */
     inline fun supportsLollipop(code: () -> Unit) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
