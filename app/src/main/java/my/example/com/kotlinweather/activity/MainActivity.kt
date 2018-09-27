@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import my.example.com.kotlinweather.R
@@ -21,6 +22,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         tv_msg.text = "Hello Kotlin!"
+        tv_msg.setOnClickListener { object :View.OnClickListener{
+            override fun onClick(v: View?) {
+            }
+        } }
 
 //        toast("Hello Kotlin!")
 //        toast("Hello Kotlin!",Toast.LENGTH_SHORT)

@@ -37,4 +37,5 @@ dependencies {
     implementation "org.jetbrains.anko:anko:$anko_version"
     implementation 'com.google.code.gson:gson:2.8.0'
     implementation 'com.github.bumptech.glide:glide:4.0.0-RC0'
+    implementation "com.android.support:design:$support_version"
 }
