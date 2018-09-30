@@ -12,9 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import my.example.com.kotlinweather.R
 import my.example.com.kotlinweather.adapter.ForecastWeatherAdapter
 import my.example.com.kotlinweather.domain.RequestForecastCommand
-import my.example.com.kotlinweather.tips.Tip01
-import my.example.com.kotlinweather.tips.Tip02
-import my.example.com.kotlinweather.tips.Tip03
+import my.example.com.kotlinweather.tips.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.find
 import org.jetbrains.anko.uiThread
@@ -86,6 +84,9 @@ class MainActivity : AppCompatActivity() {
         Tip02().test03('B')
         Tip03().printList()
         Tip03().printList02()
+
+        testExAsMem()
+        testStaticEx()
     }
 
     private val items = listOf<String>(

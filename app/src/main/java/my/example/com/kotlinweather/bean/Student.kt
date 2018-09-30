@@ -42,7 +42,7 @@ interface B {
     }
 }
 
-class C() : A(), B {
+open class C() : A(), B {
     override fun f() {
         super<A>.f()
         super<B>.f()
