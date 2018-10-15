@@ -87,6 +87,8 @@ class MainActivity : AppCompatActivity() {
 
         testExAsMem()
         testStaticEx()
+
+        testLazy()
     }
 
     private val items = listOf<String>(
