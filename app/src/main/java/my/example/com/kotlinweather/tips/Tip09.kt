@@ -19,10 +19,10 @@ fun testFun01() {
     //不推荐
     println(user1!!.name!!.equals("xiaozhang"))
     //可以使用let,通过let语句，在?.let之后，如果为空不会有任何操作，只有在非空的时候才会执行let之后的操作
-    println(user1.let {
-        user1.name
-        user1.age
-        user.toString()
+    println(user1?.let {
+        it.name
+        it.age
+        it.toString()
     })
 
     var str: String? = "111"

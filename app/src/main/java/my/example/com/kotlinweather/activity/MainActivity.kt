@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import my.example.com.kotlinweather.R
 import my.example.com.kotlinweather.adapter.ForecastWeatherAdapter
 import my.example.com.kotlinweather.domain.RequestForecastCommand
+import my.example.com.kotlinweather.testdemo.Test003
 import my.example.com.kotlinweather.tips.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.find
@@ -89,6 +90,7 @@ class MainActivity : AppCompatActivity() {
         testStaticEx()
 
         testLazy()
+        Test003().test01()
     }
 
     private val items = listOf<String>(
